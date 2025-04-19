@@ -18,7 +18,9 @@ public class HappyPet {
 			// 4. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int task = JOptionPane.showOptionDialog(null, "How would you like to take care of your pet? ", "pet simulation", 0, JOptionPane.INFORMATION_MESSAGE, null,
+			
+		while(happinessLevel<20) {
+		int task = JOptionPane.showOptionDialog(null, "How would you like to take care of your pet? ", "pet simulation", 0, JOptionPane.INFORMATION_MESSAGE, null,
 					new String[] { "Cuddle", "Feed", "Groom" }, null);
 		
 
@@ -29,6 +31,9 @@ public class HappyPet {
 			} else if (task==2) {
 				groom(userPet);
 			}
+		}
+		
+		JOptionPane.showMessageDialog(null, "You love your pet");
 			// 6. Use user input to call the appropriate method created in step 5 below.
 
 			// 7. If you determine the happiness level is large enough, tell the
